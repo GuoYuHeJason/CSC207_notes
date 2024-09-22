@@ -1,0 +1,62 @@
+Q1
+[1]
+public class Parent {
+  public int a;
+	
+  public Parent(int number) {
+    this.a = number;
+  }
+}
+
+public class Child extends Parent {
+  public Child(int numb) {		
+  }
+}
+
+Child constructor calls Parent constructor, which asks for number-> variable not defined.
+//  required: int
+//  found:    no arguments
+
+[2]
+
+
+public class Parent {
+  public int a;
+	
+  public Parent() {}
+
+  public Parent(int number) {
+    this.a = number;
+  }
+}
+
+public class Child extends Parent {
+  public Child(int numb1, int numb2) {		
+  }
+}
+
+Overloading, when super() is called, the version without parameters is ran. no error
+
+[3]
+
+
+public class Parent {
+  public int a;
+	
+  public Parent(int number) {
+    this.a = number;
+  }
+}
+
+public class Child extends Parent {
+  public Child() {}
+}
+
+Same as [1]
+
+
+Q2
+
+
+
+
