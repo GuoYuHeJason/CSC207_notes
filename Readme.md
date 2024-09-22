@@ -69,7 +69,25 @@ True
 
 
 
+Controlling Access to Members of a Class
 
+Access level modifiers determine whether other classes can use a particular field or invoke a particular method. There are two levels of access control:
+
+    At the top level—public, or package-private (no explicit modifier).
+    At the member level—public, private, protected, or package-private (no explicit modifier).
+
+A class may be declared with the modifier public, in which case that class is visible to all classes everywhere. If a class has no modifier (the default, also known as package-private), it is visible only within its own package (packages are named groups of related classes — you will learn about them in a later lesson.)
+
+At the member level, you can also use the public modifier or no modifier (package-private) just as with top-level classes, and with the same meaning. For members, there are two additional access modifiers: private and protected. The private modifier specifies that the member can only be accessed in its own class. The protected modifier specifies that the member can only be accessed within its own package (as with package-private) and, in addition, by a subclass of its class in another package.
+
+The following table shows the access to members permitted by each modifier.
+Access Levels Modifier 	Class 	Package 	Subclass 	World
+public 	Y 	Y 	Y 	Y
+protected 	Y 	Y 	Y 	N
+no modifier 	Y 	Y 	N 	N
+private 	Y 	N 	N 	N
+
+The first data column indicates whether the class itself has access to the member defined by the access level. As you can see, a class always has access to its own members. The second column indicates whether classes in the same package as the class (regardless of their parentage) have access to the member. The third column indicates whether subclasses of the class declared outside this package have access to the member. The fourth column indicates whether all classes have access to the member.
 
 
 
