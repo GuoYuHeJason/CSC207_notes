@@ -80,7 +80,46 @@ True
 
 Generic Classes
 T
+Allows code to work with multiple types without complie time error
 
+
+
+
+
+
+
+
+Week 3
+
+Overriding: variables don't get overriden, but when method gets overriden and method calls for that variable, because method is in child class, it calls the child class variable.
+
+# Java visualizer doesn't show the parent variable
+
+
+class A { 
+int x = 5;
+void printX() { System.out.println(x); } 
+} 
+
+class B extends A { 
+int x = 10;
+void printX() { System.out.println(x); } 
+}
+
+What will be the output if we execute the following code?
+
+A a = new B();
+a.printX();
+System.out.println(a.x);
+
+
+Ask about 
+Run time exception
+and 
+Compile time error
+
+On mentimeter
+What is the difference between Run time exception and Compile time error, how do we distinguish them?
 
 
 
