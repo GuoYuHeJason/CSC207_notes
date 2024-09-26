@@ -1,0 +1,18 @@
+Test
+General:                               Typical cases,            Boundry cases:      0,1,more, odd, even, beginning, middle, end, empty...
+                                                                                                different combinations that lead to diff behavior
+                                      Invalid cases -> consistent with doc, throws excpetions.........
+
+Data structure:          representation invariatns, types......
+
+Unit* Testing
+1. test each piece of the program independently,        so easy to locate cause of faluliare
+2. report passes, fails, errors: know what happend
+3. setup code for test (construct inputs... delete them after)
+4. test suites
+
+Want to do something standard -> try to find some packages/libaries
+
+JUnit5
+
+Very usefull: the lec notes, for this and both JSwing
