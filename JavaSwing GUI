@@ -1,0 +1,55 @@
+// JPanel, JTextField, JLabel, JButton, JOptionPane, JFrame
+
+// 1. SwingUtilities.invokelater
+// 2.   set small panels
+// 3.       within, have JTextField, JLabel, JButton, JOptionPane...
+
+// 3. main panel, set layout
+// 4. set JFrame
+
+public class JButtonListener {
+
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(() -> {
+            JPanel firstNamePanel = new JPanel();
+            JTextField firstNameField = new JTextField(10);
+            firstNamePanel.add(new JLabel("First Name:"));
+            firstNamePanel.add(firstNameField);
+
+            JPanel lastNamePanel = new JPanel();
+            JTextField lastNameField = new JTextField(10);
+            lastNamePanel.add(new JLabel("Last Name:"));
+            lastNamePanel.add(lastNameField);
+
+            JPanel buttonPanel = new JPanel();
+            JButton submit = new JButton("Submit");
+            buttonPanel.add(submit);
+            buttonPanel.add(new JButton("Cancel"));
+
+            submit.addActionListener(new ActionListener() {
+                // new here make an instance of an interface,
+                // syntax here allows that, by directly implementing the abstract methods
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                    String firstName = firstNameField.getText();
+                    String lastName = lastNameField.getText();
+                    JOptionPane.showMessageDialog(null, "Hello " + firstName + " " + lastName);
+                }
+            });
+            // a lot of methods are hidden
+
+
+            JPanel mainPanel = new JPanel();
+            mainPanel.setLayout(new BoxLayout(mainPanel, BoxLayout.Y_AXIS));
+            mainPanel.add(firstNamePanel);
+            mainPanel.add(lastNamePanel);
+            mainPanel.add(buttonPanel);
+
+            JFrame frame = new JFrame("Nested Panels Example");
+            frame.setContentPane(mainPanel);
+            frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            frame.pack();
+            frame.setVisible(true);
+        });
+    }
+}
