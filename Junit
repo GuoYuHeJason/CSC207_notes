@@ -16,3 +16,10 @@ Want to do something standard -> try to find some packages/libaries
 JUnit5
 
 Very usefull: the lec notes, for this and both JSwing
+
+    // BeforeEach: called before each @Test
+Tests are ran in random order
+
+Test with System.in
+System.setIn
+System.setOut
