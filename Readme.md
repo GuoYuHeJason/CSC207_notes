@@ -131,13 +131,6 @@ a.printX();
 System.out.println(a.x);
 
 
-Ask about 
-Run time exception
-and 
-Compile time error
-
-On mentimeter
-What is the difference between Run time exception and Compile time error, how do we distinguish them?
 
 
 
