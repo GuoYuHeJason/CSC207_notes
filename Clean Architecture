@@ -1,0 +1,33 @@
+use case
+Chapter 15: 
+logical pieces -> System
+Layered
+Good Architecture -> easy
+
+Policy == function
+input -> output
+
+Level of policy
+Low : ex. close to input and output , getting input, printing output
+high: core logic. 
+
+Entity: shared by applications
+methods (rules/policies) + attributes (data)
+== a set of Classes 
+Highest level core policy
+
+Use case: application specific, uses entities
+Each function of the program, action user can take, a single interaction.
+input, output, result
+Choosing usecases is a usecase
+Calling actual methods, (main) 
+
+Interface adapter: converts input from user to parameters used by use case. 
+ex. controller, button on UI -> call use case. 
+
+Frameworks & Drivers: details : UI, databases, outside APIs  
+
+Flow of dependency (method call) : outside to insdie,        inside to outside -> dependency inversion -> interfaces on the outside layers.
+Name of things (imports) in the outer layer should not be in the inner layer.
+
+Can't skip layer
