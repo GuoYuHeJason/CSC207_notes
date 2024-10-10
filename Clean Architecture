@@ -31,3 +31,47 @@ Flow of dependency (method call) : outside to insdie,        inside to outside -
 Name of things (imports) in the outer layer should not be in the inner layer.
 
 Can't skip layer
+
+
+DS = data structure, just storage, only have 
+
+Use case layer: Use Case Interactor + Interfaces (services interactor needs) + data
+
+Out put boundary interface -> output of use case
+
+Input Boundary: API for use case, how to call it. Pass info into use case
+
+Use case changes view model - > view has listener -> updates accordingly
+
+Data Access interface : Use case may need outside data,
+
+View : display output, get input from user
+controller (input boundary) -> convert input to format param of use case
+Use case: does work, delegate work to Data Interface/ Entities
+get output to output boundary, changes view model and thus view
+
+Core logic: Interfaces, Use case, Entities 
+
+
+
+
+
+1 function -> 1 use case -> 1 Interactor 
+
+persistence layer -> Data Access 
+UI -> Output boundry
+API -> Input boundry
+Meaning that useCaseInteractor Implements InputBoundry
+Create entity: Factory
+
+Interactor class : 4 interfaces 
+
+Sequence diagrams: call stacks, stops at interface
+
+Alt S
+
+entities: user and factory
+
+
+
+
