@@ -1,0 +1,34 @@
+Unit test for Use cases
+
+Test a UseCaseInteractor
+
+1. Test all methods in Entity individually 
+
+2. Integration Test -> 2 components interact
+
+3. End to End -> input to output, seeing if the view report correctly        (fragile, break if any error, view is likely to change, causing test to fail)
+
+Enities don't depend on anyting, unit test directly
+
+UseCaseInteractor depends on Entity, Input/Output Data, Output Boundary(I), Data Access Interface(I).
+Mocking: make a minimal implementation (test case) of Interfaces the UseCaseInteractor depends on
+completely under control, 100% correct.
+Mock so don't depend on actual Data Access/Presenter/Controller
+Mock = Locally, Faster than real data requests 
+Only test Application Business Rules
+
+Also pass in test case input data. see if output data is correct. And check state of system (Data Access).
+
+Change mock test to Integration test
+Plug in real DAO/Presenter. Check View Model instead of Output Data.
+From inside to outside. 
+
+End to End Test: change with each update.
+Ex. pretend a button is clicked
+
+InMemory = mock
+
+UseCase Interactor shouldn't return anything -> job of presenter
+but pass in a OutputData to the OutputBoudary
+
+Mock Presenter : methods that should be called : assert things
