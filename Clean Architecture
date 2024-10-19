@@ -72,6 +72,11 @@ Alt S
 
 entities: user and factory
 
+view, data access, entity can be shared by use cases,
+interfaces cannot.
+app: construct GUI, use case factories.
+view: panels
+
 
 
 
