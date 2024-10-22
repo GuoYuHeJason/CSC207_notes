@@ -1,0 +1,38 @@
+Shape of code (template) for clean architecure.
+
+pattern -> communicate design ideas : I want this x pattern. 
+
+Refactor : lower coupling, increase cohesion
+
+Coupling : diff classes dependcy
+Cohesion: things inside 1 class.          (1 class 1 job)
+
+collaboration == coupling
+
+Hard dependcy : new Class ()
+Have to change code to change class
+ok when classes are built in, ex. new ArrayList<>()
+or when classes are meant to be coupled: ex. linked list and node
+
+Dependcy injection: refactor hard dependcy
+get rid of new keywords by passing them in as parameters
+instialize class outside, then inject
+
+
+Simple factory:
+Creating and using should be seperate
+
+Creating complicated objects, pre-create objects. hide details, do different things
+pass in a facotry as parameter.
+new Class() -> factory.createClass()
+
+Builder:
+Director: construct-> call different BuildParX, call getProduct in the end.
+
+final JFrame app = appBuilder
+                            .addPart1()
+                            .addPartX()
+                            .build();
+
+build = create JFrame, put Parts in.
+
